@@ -1,10 +1,10 @@
+# Sistema de Controle de Ponto
+
 Bem-vindo ao repositório do trabalho avaliativo do grupo de Iuri, Sanderson e Arthur Cavalcante !
 
 - **tutu (Arthur Cavalcante)** - RA: 22300510
 - **Sanderson** - RA: 22301449
 - **Iuri** - RA: 22304475 
-
-# Sistema de Controle de Ponto
 
 ## Descrição
 Este projeto consiste no desenvolvimento de um sistema de controle de ponto eletrônico utilizando apenas **HTML**, **CSS** e **JavaScript**, sem o uso de frameworks ou bibliotecas externas.
