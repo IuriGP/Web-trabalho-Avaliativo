@@ -1,4 +1,3 @@
-# Markdown syntax guide
 Bem-vindo ao repositório do trabalho avaliativo do grupo de Iuri, Sanderson e Arthur Cavalcante !
 
 - **tutu (Arthur Cavalcante)** - RA: 22300510
