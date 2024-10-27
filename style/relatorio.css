@@ -9,8 +9,8 @@
     --verde-medio-escuro: #284703; 
     --verde-escuro: #434D36; 
     --verde-vibrante: #555D4C; 
-    --padding-botao: 12px 20px; /* Padding padronizado */
-    --tamanho-fonte-botao: 1rem; /* Tamanho de fonte para botões */
+    --padding-botao: 12px 20px; 
+    --tamanho-fonte-botao: 1rem; 
 }
 
 * {
@@ -31,7 +31,7 @@ main {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    align-items: center; /* Centraliza os elementos dentro do main */
+    align-items: center; 
 }
 
 /* Título do Relatório */
@@ -61,16 +61,16 @@ main {
 
 /* Label e Select de Filtragem */
 #labelFiltro {
-    font-size: 1.5rem; /* Aumenta o tamanho da fonte */
+    font-size: 1.5rem; 
     color: var(--verde-medio-claro);
     font-weight: bold;
     margin-top: 10px;
 }
 
 #filter {
-    font-size: 1.1rem; /* Aumenta o tamanho da fonte */
-    padding: 10px; /* Aumenta o padding para tornar o select maior */
-    width: 220px; /* Largura ajustada para aumentar o tamanho */
+    font-size: 1.1rem; 
+    padding: 10px; 
+    width: 220px; 
     border-radius: 5px;
     border: 1px solid var(--verde-escuro);
     background-color: var(--verde-claro);
@@ -118,6 +118,13 @@ main {
     background-color: #DBE2EF;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 300px;
+    flex: 1 1 calc(30% - 20px); 
+}
+
+#registros-relatorio {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px; 
 }
 
 /* Responsividade */
@@ -136,6 +143,9 @@ main {
         padding: 10px;
         font-size: 0.9rem;
     }
+    .register-item {
+        flex: 1 1 calc(45% - 20px); 
+    }
 }
 
 @media (max-width: 480px) {
@@ -152,5 +162,9 @@ main {
     #btn-gerar-grafico {
         padding: 8px;
         font-size: 0.8rem;
+    }
+
+    .register-item {
+        flex: 1 1 calc(100% - 20px); 
     }
 }

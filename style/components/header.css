@@ -59,6 +59,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding: 0; 
 }
 
 .header-nav a,
@@ -84,10 +85,12 @@ header {
     color: white;
     font-size: 1rem;
     border-radius: 5px;
-    padding: 10px;
     transition: background-color 0.3s ease;
+    margin: 0;
+    padding: 10px; 
+    border: none;
+    display: inline-block;
 }
-
 .history-button:hover {
     background-color: var(--verde-vibrante);
 }
