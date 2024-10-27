@@ -110,16 +110,88 @@ main {
 }
 
 /* Estilo dos Itens de Registro */
-.registro-item {
-    border: 2px solid var(--verde-medio-escuro);
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
-    background-color: #DBE2EF;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    flex: 1 1 calc(30% - 20px); 
+.register-item {
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #e0e0e0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
+
+.details-localização {
+    margin-top: 5px; 
+}
+
+.details-localização summary {
+    color: black; 
+}
+
+.details-content {
+    padding: 10px; 
+    border: 3px solid #ddd; 
+    border-radius: 10px; 
+    background-color: var(--verde-escuro); 
+    color: white; 
+}
+
+.registro-details-latitude,
+.registro-details-longitude,
+.linkGoogle {
+    color: white; 
+}
+
+.alert {
+    color: red; 
+    font-weight: bold;
+}
+
+.alert.edited {
+    color: orange; 
+}
+
+.linkGoogle {
+    text-decoration: underline; 
+}
+
+#botoes-e-msg {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 10px; 
+}
+
+.btn {
+    padding: 8px 15px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin: 0 5px;
+    background-color: #28a745; 
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #218838; 
+}
+
+.btn.editar {
+    background-color: #007bff; 
+}
+
+.btn.editar:hover {
+    background-color: #0056b3; 
+}
+
+.btn.excluir {
+    background-color: black; 
+}
+
+.btn.excluir:hover {
+    background-color: #c82333; 
+}
+
+
 
 #registros-relatorio {
     display: flex; 

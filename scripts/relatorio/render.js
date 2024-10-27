@@ -95,33 +95,37 @@ export function renderList() {
             }
 
             detalheRegistro.innerHTML = `
-                <div id="conteudo-${register.id}">
-                    <p><strong>Tipo:</strong> ${register.tipo}</p>
-                    <p><strong>Horário:</strong> ${register.hora || 'Horário não registrado'}</p>
+    <div id="conteudo-${register.id}" class="register-item">
+        <p><strong>Tipo:</strong> ${register.tipo}</p>
+        <p><strong>Horário:</strong> ${register.hora || 'Horário não registrado'}</p>
 
-                    <details class="details-localização">
-                    <summary id="div-local"><strong> Localização </strong></summary>
-                    <div class="details-content">
-                        <p class="registro-details-latitude"><strong>Latitude:</strong> ${register.localizacao.latitude || 'Não possui latitude'}</p>
-                        <p class="registro-details-longitude"><strong>Longitude:</strong> ${register.localizacao.longitude || 'Não possui longitude'}</p>
-                        <br>
-                        <a class="linkGoogle" href="${link}" target="_blank">Abrir localização no Google Maps</a>
-                        <div id="map-${register.id}" class="map" style="height: 200px;"></div>  
-                    </details>
+        <details class="details-localização">
+            <summary id="div-local"><strong>Localização</strong></summary>
+            <div class="details-content">
+                <p class="registro-details-latitude"><strong>Latitude:</strong> ${register.localizacao.latitude || 'Não possui latitude'}</p>
+                <p class="registro-details-longitude"><strong>Longitude:</strong> ${register.localizacao.longitude || 'Não possui longitude'}</p>
+                <br>
+                <a class="linkGoogle" href="${link}" target="_blank">Abrir localização no Google Maps</a>
+                <div id="map-${register.id}" class="map" style="height: 200px;"></div>  
+            </div>
+        </details>
 
-                    <p><strong>Observações:</strong> ${register.obs || 'Sem observações'}</p>
-                    ${arquivoHTML}
-                    ${register.isEdited ? '<p style="color:orange;"><strong>Registro editado</strong></p>' : ''}
-                    ${register.isPastRegister ? '<p style="color:red;"><strong>Ponto no passado</strong></p>' : ''}
-                </div>
-                <p class="alert-message" style="display:none; color:red; margin-top: 10px;"></p>
-                <div id="botoes-e-msg">
-                    <div id="botoes-exc-edit">
-                        <button class="editar">✏️</button>
-                        <button class="excluir">❌</button>
-                    </div>
-                </div>
-            `;
+        <p><strong>Observações:</strong> ${register.obs || 'Sem observações'}</p>
+        ${arquivoHTML}
+        ${register.isEdited ? '<p class="alert edited"><strong>Registro editado</strong></p>' : ''}
+        ${register.isPastRegister ? '<p class="alert past"><strong>Ponto no passado</strong></p>' : ''}
+        
+        <p class="alert-message" style="display:none; color:red; margin-top: 10px;"></p>
+        
+        <div id="botoes-e-msg">
+            <div id="botoes-exc-edit">
+                <button class="editar btn">✏️ Editar</button>
+                <button class="excluir btn">❌ Excluir</button>
+            </div>
+        </div>
+    </div>
+`;
+
 
             detailsDiv.appendChild(detalheRegistro);
 
