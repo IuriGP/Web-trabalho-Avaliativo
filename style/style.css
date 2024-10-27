@@ -28,56 +28,6 @@ body {
     height: 100vh;
 }
 
-header {
-    background-color: var(--verde-medio-escuro); 
-    padding: 10px 20px;
-    color: white; 
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-}
-
-.header-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin-left: 10px;
-}
-
-.header-nav {
-    display: flex;
-    align-items: center; 
-    justify-content: flex-end; 
-}
-
-.header-nav a,
-.header-nav button {
-    margin: 0 8px;
-    background-color: var(--verde-claro);
-    border-radius: 5px;
-    color: white;
-    padding: 10px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.header-nav button:hover,
-.header-nav a:hover {
-    background-color: var(--verde-vibrante);
-}
-
-footer {
-    background-color: var(--verde-medio-escuro); 
-    color: white; 
-    text-align: center; 
-    padding: 15px; 
-    position: relative; 
-    margin-top: 20px; 
-}
-
-
 .data-hora {
     text-align: center;
     font-size: 2rem;

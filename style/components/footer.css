@@ -5,15 +5,14 @@
 }
 
 footer {
-    position: relative;
-    bottom: 0;
-    background-color: #112D4E;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    margin-top: 50px;
+    background-color: var(--verde-medio-escuro); 
+    color: white; 
+    text-align: center; 
+    padding: 15px; 
+    position: relative; 
+    margin-top: 20px; 
 }
+
 
 #textoFooter {
     font-family: var(--fonte-poppins);

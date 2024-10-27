@@ -1,12 +1,16 @@
 @import url('./components/header.css');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('./components/footer.css');
 
 :root {
-    --fonte-poppins: "Poppins", sans-serif;
-    --cor-primaria: #003459;
-    --cor-secundaria: #007EA7;
-    --cor-texto: #333;
-    --cor-fundo: #f4f4f4;
+    --fonte-primaria: "Outfit", sans-serif;
+    --verde-claro: #88B257; 
+    --verde-medio-claro: #4A701C; 
+    --verde-medio-escuro: #284703; 
+    --verde-escuro: #434D36; 
+    --verde-vibrante: #555D4C; 
+    --padding-botao: 12px 20px; /* Padding padronizado */
+    --tamanho-fonte-botao: 1rem; /* Tamanho de fonte para botões */
 }
 
 * {
@@ -15,19 +19,22 @@
     box-sizing: border-box;
 }
 
-/* Estilo geral do body e do layout */
 body {
+    font-family: var(--fonte-primaria);
+    background-color: var(--verde-vibrante);
+    color: #3c3c3c;
     height: 100vh;
 }
 
-/* Layout principal */
 main {
     display: flex;
     flex-direction: column;
-    font-family: var(--fonte-poppins);
     gap: 20px;
+    padding: 20px;
+    align-items: center; /* Centraliza os elementos dentro do main */
 }
 
+/* Título do Relatório */
 #start-relatorio {
     text-align: center;
     margin: 30px 0;
@@ -36,323 +43,114 @@ main {
     font-weight: 700;
 }
 
-.form-edicao {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-label {
-    font-size: 20px;
-}
-
-#labelFiltro {
+#start-relatorio h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: black;
+    margin: 20px 0;
     text-align: center;
 }
 
+#start-relatorio p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Label e Select de Filtragem */
+#labelFiltro {
+    font-size: 1.5rem; /* Aumenta o tamanho da fonte */
+    color: var(--verde-medio-claro);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 #filter {
-    align-self: center;
-    border: 0.5px solid black;
+    font-size: 1.1rem; /* Aumenta o tamanho da fonte */
+    padding: 10px; /* Aumenta o padding para tornar o select maior */
+    width: 220px; /* Largura ajustada para aumentar o tamanho */
+    border-radius: 5px;
+    border: 1px solid var(--verde-escuro);
+    background-color: var(--verde-claro);
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#filter:hover {
+    background-color: var(--verde-medio-claro);
+}
+
+/* Botões de Exportação e Gráficos */
+#btn-exportar-pdf,
+#btn-gerar-grafico {
+    background-color: var(--verde-medio-claro);
+    color: white;
+    padding: var(--padding-botao);
+    font-size: var(--tamanho-fonte-botao);
+    border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    margin-top: 20px;
 }
 
-input, select {
-    border-radius: 3px;
-    border: 0.5px solid black;
-    font-size: 15px;
-    padding: 10px;
+#btn-exportar-pdf:hover,
+#btn-gerar-grafico:hover {
+    background-color: var(--verde-vibrante);
 }
 
-#btn-exportar-pdf {
-    align-self: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    margin-bottom: 90px;
-    padding: 20px;
-    font-size: 1.2rem;
-}
-
+/* Mensagens de Registro */
 #msg-registro-ind {
     text-align: center;
 }
 
-#btn-exportar-pdf:hover {
-    transform: scale(1.1);
-}
-
-#botoes-edit {
-    display: flex;
-    flex-direction: row;
-    width: 10%;
-    gap: 10px;
-}
-
-#btn-gerar-grafico {
-    padding: 20px;
-    background-color: blue;
-    color: white;
-    font-size: 1.3rem;
-    border: 0px;
-    width: 20%;
-    align-self: center;
-    transition: transform 0.3s ease;
-}
-
-#btn-gerar-grafico:hover {
-    transform: scale(1.1);
-}
-
-/* Estilos dos parágrafos */
-p {
-    font-size: 1.25rem;
-    color: black;
-    line-height: 2.5;
-}
-
-/* Links */
-a {
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--cor-secundaria);
-}
-
-/* Container de conteúdo com responsividade */
-#conteudo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-/* Estilo dos itens de registro */
+/* Estilo dos Itens de Registro */
 .registro-item {
-    border: 2px solid var(--cor-primaria);
+    border: 2px solid var(--verde-medio-escuro);
     padding: 15px;
-    margin-bottom: 20px;
+    margin: 10px;
     border-radius: 10px;
     background-color: #DBE2EF;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-left: 90px;
-    margin-right: 90px;
+    width: 300px;
 }
 
-#div-local {
-    cursor: pointer;
-    color: blue;
-}
-
-/* Container de detalhes do registro */
-.registros-ponto {
-    margin: 20px 0;
-}
-
-/* Estilo do link para detalhes */
-.toggle-details {
-    color: var(--cor-primaria);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    font-size: 1.6rem;
-}
-
-.toggle-details:hover {
-    color: var(--cor-secundaria);
-}
-
-/* Estilo das informações detalhadas do registro */
-.registro-detalhe {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    padding: 15px;
-    border: 2px solid var(--cor-secundaria);
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Ajuste das margens dos parágrafos dentro de detalhes */
-.registro-detalhe p {
-    margin: 0;
-    margin-right: 20px;
-}
-
-#botoes-exc-edit {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Estilo dos botões */
-button {
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    background-color: var(--cor-secundaria);
-    color: white;
-    transition: background-color 0.3s ease;
-    margin-bottom: 10px;
-}
-
-.theme-toogle-button:hover {
-    background-color: #003459;
-}
-
-/* Estilos do mapa dentro dos detalhes */
-.map {
-    width: 100%;
-    height: 200px;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-/* Ajuste de espaçamento e estilo para latitude/longitude */
-.registro-details-latitude, .registro-details-longitude {
-    padding-left: 5px;
-}
-
-/* Estilo dos detalhes abertos */
-details[open] {
-    padding: 15px;
-    border: 2px solid var(--cor-secundaria);
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-/* Estilo do resumo de detalhes */
-details[open] summary {
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-/* Estilo do conteúdo de localização */
-.details-localização[open] .map {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 2px solid darkslategray;
-    border-radius: 5px;
-}
-
-/* Responsividade para telas menores que 768px */
+/* Responsividade */
 @media (max-width: 768px) {
-    #start-relatorio {
+    #start-relatorio h1 {
         font-size: 2rem;
     }
 
-    .form-edicao {
-        gap: 10px;
+    #filter {
+        padding: 6px;
+        font-size: 0.85rem;
     }
 
-    label {
-        font-size: 16px;
-    }
-
-    input, select {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    #btn-exportar-pdf {
-        padding: 15px;
-        font-size: 1rem;
-    }
-
-    #botoes-edit {
-        width: 100%;
-        gap: 5px;
-    }
-
+    #btn-exportar-pdf,
     #btn-gerar-grafico {
-        width: 80%;
-        padding: 15px;
-        font-size: 1rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .registro-item {
-        margin-left: 10px;
-        margin-right: 10px;
         padding: 10px;
-    }
-
-    .registro-detalhe {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    #botoes-exc-edit {
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    .map {
-        height: 150px;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
-
-    h1 {
-        font-size: 2rem;
-        margin: 20px;
-    }
-
-    #start-relatorio {
+    #start-relatorio h1 {
         font-size: 1.5rem;
     }
 
-    label {
-        font-size: 14px;
+    #filter {
+        padding: 4px;
+        font-size: 0.8rem;
     }
 
-    input, select {
-        font-size: 12px;
-        padding: 6px;
-    }
-
-    #btn-exportar-pdf {
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-
+    #btn-exportar-pdf,
     #btn-gerar-grafico {
-        width: 100%;
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    .registro-item {
-        margin-left: 15px;
-        margin-right: 15px;
         padding: 8px;
-    }
-
-    .registro-detalhe {
-        padding: 8px;
-    }
-
-    #btn-gerar-grafico {
-        width: 30%;
-    }
-
-    .map {
-        height: 120px;
+        font-size: 0.8rem;
     }
 }
