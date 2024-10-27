@@ -22,6 +22,10 @@ body.dark-mode h1 {
     color: #D8D8D8; /* Texto levemente mais claro */
 }
 
+#dialog-ponto-pass p {
+    color: white; /* Define a cor do texto como branco */
+}
+
 /* Calendário */
 .calendar {
     background-color: white;
@@ -54,16 +58,8 @@ body.dark-mode summary {
 
 /* Detalhes e localizações */
 
-body.dark-mode .registro-detalhe {
-    background-color: #3A3A3A; /* Cinza médio */
-}
-
 body.dark-mode #div-local {
-    color: #2C3E50; /* Tom suave de rosa claro */
-}
-
-body.dark-mode .details-localização[open] {
-    background-color: #444; /* Cinza escuro */
+    color: black; /* Tom suave de rosa claro */
 }
 
 /* Links */

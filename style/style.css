@@ -156,8 +156,17 @@ button:hover {
     margin-top: var(--espaco-grande);
 }
 
-#btn-dialog-bater-ponto {
+#btn-dialog-bater-ponto-pass {
     margin: 0 auto;
+    font-size: 1.3rem;
+}
+
+#btn-dialog-bater-ponto {
+    display: block; 
+    margin: 20px auto 0 auto; 
+    padding: 10px 20px; 
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
 }
 
 #btn-dialog-fechar,
@@ -217,7 +226,9 @@ button:hover {
 
 #dialog-data,
 #dialog-hora {
-    color: white; 
+    color: white !important; 
+    text-align: center; 
+    font-weight: bold; 
 }
 
 /* Responsividade */
