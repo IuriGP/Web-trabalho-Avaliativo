@@ -86,27 +86,32 @@
     <dialog id="dialog-ponto-pass">
         <p id="dialog-hora-pass"></p>
         <label for="data">Escolha uma data:</label>
-        <input type="date" id="data" name="data">
-        <br>
-        <select name="tipos-ponto-pass" id="tipos-ponto-pass">
-            <option value="entrada">Entrada</option>
-            <option value="intervalo">Intervalo</option>
-            <option value="volta-intervalo">Volta Intervalo</option>
-            <option value="saida">Saída</option>
-        </select>
-        <br>
-
+        <div class="centralizado">
+            <input type="date" class="input-data" id="data" name="data" required>
+        </div>
+        
+        <label for="tipos-ponto-pass">Escolha o tipo de ponto:</label>
+        <div class="centralizado">
+            <select name="tipos-ponto-pass" class="select-tipo" id="tipos-ponto-pass">
+                <option value="entrada">Entrada</option>
+                <option value="intervalo">Intervalo</option>
+                <option value="volta-intervalo">Volta Intervalo</option>
+                <option value="saida">Saída</option>
+            </select>
+        </div>
+        
         <label for="justificativa-pass">Justificativa:</label><br>
-        <textarea id="justificativa-pass" placeholder="Digite sua justificativa"></textarea><br><br>
-
+        <textarea id="justificativa-pass" class="textarea-justificativa" placeholder="Digite sua justificativa"></textarea><br><br>
+        
         <label for="arquivo-pass" class="custom-file-upload">Anexar arquivo (PDF, imagens):</label><br>
         <input type="file" id="arquivo-pass" accept=".pdf,.jpg,.jpeg,.png,.txt"><br>
         <br>
-        <span id="file-chosen">Nenhum arquivo escolhido</span>
-        <button id="btn-dialog-bater-ponto-pass">Registrar ponto no passado</button>
-        <p id="dialog-last-register"></p>
-        <button id="btn-dialog-fechar-pass">X</button>
+        <div class="dialog-buttons">
+            <button id="btn-dialog-bater-ponto-pass">Registrar ponto no passado</button>
+            <button id="btn-dialog-fechar-pass">X</button>
+        </div>
     </dialog>
+    
 
 
     <div>

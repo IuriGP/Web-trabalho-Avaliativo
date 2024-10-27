@@ -68,8 +68,9 @@ export function renderList() {
 
         const dataElement = document.createElement('p');
         dataElement.innerHTML = `
-            <a href="#" class="toggle-details"> ✅ ${date}</a>
-        `;
+    <a href="#" class="toggle-details date-card"> ✅ ${date}</a>
+`;
+
         divRegistro.appendChild(dataElement);
 
         const detailsDiv = document.createElement('div');

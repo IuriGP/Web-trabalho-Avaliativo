@@ -84,7 +84,98 @@ main {
     background-color: var(--verde-medio-claro);
 }
 
-/* Botões de Exportação e Gráficos */
+.fade {
+    transition: opacity 0.5s ease;
+    opacity: 0; 
+}
+
+.fade.show {
+    opacity: 1; 
+}
+
+.date-card {
+    display: block; 
+    padding: 15px; 
+    border-radius: 10px; 
+    background-color: var(--verde-vibrante);
+    color: white; 
+    text-decoration: none;
+    margin-bottom: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s; 
+}
+
+.date-card:hover {
+    background-color: #218838;
+}
+
+
+.form-edicao {
+    background-color: #e0e0e0; 
+    border-radius: 10px;
+    padding: 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 15px; 
+}
+
+.form-edicao label {
+    display: block; 
+    margin-top: 10px; 
+    color: black; 
+}
+
+.form-edicao select,
+.form-edicao input[type="text"],
+.form-edicao input[type="time"] {
+    width: 100%;
+    padding: 10px; 
+    margin-top: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #fff; 
+}
+
+.form-edicao input[type="text"]:focus,
+.form-edicao input[type="time"]:focus,
+.form-edicao select:focus {
+    border-color: #007bff; 
+    outline: none; 
+}
+
+#botoes-edit {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 15px; 
+}
+
+#botoes-edit button {
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+#botoes-edit button[type="submit"] {
+    background-color: #28a745; 
+    color: white; 
+}
+
+#botoes-edit button[type="submit"]:hover {
+    background-color: #218838; 
+}
+
+.cancelar-edicao {
+    background-color: #dc3545; 
+    color: white;
+}
+
+.cancelar-edicao:hover {
+    background-color: #c82333; 
+}
+
+
+
 #btn-exportar-pdf,
 #btn-gerar-grafico {
     background-color: var(--verde-medio-claro);

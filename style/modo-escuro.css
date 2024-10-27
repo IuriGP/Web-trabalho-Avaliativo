@@ -1,3 +1,4 @@
+/* Transições e cores gerais */
 body {
     background-color: white;
     color: black;
@@ -5,21 +6,23 @@ body {
 }
 
 body.dark-mode {
-    background-color: #2b2929;
-    color: white;
+    background-color: #1E1E1E; /* Fundo escuro neutro */
+    color: #E0E0E0; /* Texto de cor clara */
 }
 
+/* Título */
 h1 {
-    background-color:  white;
+    background-color: white;
     color: black;
     transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode h1 {
-    background-color: #2b2929;
-    color: white;
+    background-color: #1E1E1E; /* Cor neutra do fundo para o título */
+    color: #D8D8D8; /* Texto levemente mais claro */
 }
 
+/* Calendário */
 .calendar {
     background-color: white;
     color: black;
@@ -27,73 +30,71 @@ body.dark-mode h1 {
 }
 
 body.dark-mode .calendar {
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Fundo mais escuro */
+    color: #F0F0F0; /* Texto claro */
 }
 
+/* Seções específicas */
 body.dark-mode .data-hora {
-    background-color: #112D4E;
+    background-color: #2C3E50; /* Fundo azul-escuro */
 }
 
-body.dark-mode #dialog-ponto-pass {
-    background-color: #17406e;
-    color: white;
-}
-
+body.dark-mode #dialog-ponto-pass,
 body.dark-mode #dialog-ponto {
-    background-color: #17406e;
-    color: white;
+    background-color: #243B55; /* Azul profundo para diálogos */
+    color: #EAEAEA; /* Texto claro */
 }
 
-body.dark-mode #enunciado {
-    color: white;
+body.dark-mode #enunciado,
+body.dark-mode .toggle-details,
+body.dark-mode p, 
+body.dark-mode summary {
+    color: black; /* Texto claro */
 }
 
-body.dark-mode .toggle-details {
-    color: white;
-}
-
-body.dark-mode .registro-item {
-    background-color: #112D4E;
-}
+/* Detalhes e localizações */
 
 body.dark-mode .registro-detalhe {
-    background-color: #3f3f3f;
-}
-
-body.dark-mode p, summary {
-    color: white;
+    background-color: #3A3A3A; /* Cinza médio */
 }
 
 body.dark-mode #div-local {
-    color: rgb(241, 213, 213);
+    color: #2C3E50; /* Tom suave de rosa claro */
 }
 
 body.dark-mode .details-localização[open] {
-    background-color: #333;
+    background-color: #444; /* Cinza escuro */
 }
 
+/* Links */
 body.dark-mode .linkGoogle {
-    color: white;
+    color: #A9CCE3; /* Azul claro para links */
 }
 
 body.dark-mode .linkGoogle:hover {
-    color: #3F72AF;
+    color: #3F72AF; /* Azul brilhante no hover */
 }
 
+/* Calendário - Dia Atual */
 body.dark-mode .today {
-    color: white;
-    border: 2px solid white;
+    color: #F0F0F0; /* Branco */
+    border: 2px solid #F0F0F0; /* Borda clara */
 }
 
-body.dark-mode #dialog-data, body.dark-mode #dialog-hora {
-    color: white;
-}
-
-body #dialog-data, body #dialog-hora {
-    color:black;
-}
-
+/* Diálogos */
+body.dark-mode #dialog-data, 
+body.dark-mode #dialog-hora,
 body.dark-mode #dialog-last-register {
+    color: #E0E0E0; /* Texto claro */
+}
+
+/* Para diálogos em modo claro */
+body #dialog-data, 
+body #dialog-hora {
+    color: black;
+}
+/* Modo Noturno - Ajustes para o título e parágrafo do Relatório */
+body.dark-mode #start-relatorio h1,
+body.dark-mode #start-relatorio p {
     color: white;
 }
